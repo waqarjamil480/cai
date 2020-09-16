@@ -109,6 +109,9 @@ total 1647
     margin: auto;
     margin-bottom: 13px;
 }
+.dashboard .left-nav .left-menu-bar li a.disable{
+    opacity: 0.5;
+}
 .dashboard .left-nav .left-menu-bar li a img {
     display: block;
     margin: auto;
@@ -126,6 +129,15 @@ total 1647
     background-color: #6371D1;
     color: #d8dbf3;
 }
+
+.dashboard .left-nav .left-menu-bar li a.disable:hover,
+.dashboard .left-nav .left-menu-bar li a.disable:focus,
+.dashboard .left-nav .left-menu-bar li a.disable:hover:focus{
+    text-decoration: none;
+    background-color: #4c4c50;
+    color: #d2d2d3;
+}
+
 
 .dashboard .left-nav .left-menu-bar .icon{
     display: block;
@@ -177,29 +189,26 @@ total 1647
 }
 .cus-btn-group .btn {
     display: inline-block;
+    background-color: #fff;
+    border: 1px solid  #78787833;
+    color: #565656;
     width: 100%;
     max-width: 96px;
-    background-color: #646464;
     margin-right: 5px;
-    border: 1px solid #646464;
-    color: #fff;
     font-size: 14px;
     line-height: 24px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
+
 }
+.cus-btn-group .btn.active,
 .cus-btn-group .btn:hover,
 .cus-btn-group .btn:focus,
 .cus-btn-group .btn:hover:focus{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+     background-color: #646464;
+     border: 1px solid #646464;
+     color: #fff;
 }
 .cus-btn-group .btn img {
     margin-right: 10px;
@@ -237,6 +246,9 @@ total 1647
     padding: 19px 10px;
     margin-bottom: 10px;
 }
+.dashboard .form-sec .types a.disable{
+    opacity: 0.5;
+}
 .dashboard .form-sec .types a img {
     margin-right: 12px;
 }
@@ -245,6 +257,12 @@ total 1647
 .dashboard .form-sec .types a:focus,
 .dashboard .form-sec .types a:hover:focus{
     border-bottom: 1px solid  #69ABE4;
+    text-decoration: none;
+}
+.dashboard .form-sec .types a.disable:hover,
+.dashboard .form-sec .types a.disable:focus,
+.dashboard .form-sec .types a.disable:hover:focus{
+    border-bottom: 1px solid  #4b6a8233;
     text-decoration: none;
 }
 .dashboard .form-sec .types {
@@ -291,3 +309,45 @@ total 1647
 .map-sec.cus-col img{
     width: 100%;
 }
+ul.year-ranges {
+    padding-left: 0px;
+    list-style: none;;
+}
+ul.year-ranges li{
+    border-top: 1px solid #565656;
+    font-size: 0px;
+    margin-bottom: 10px;
+    width: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+    display: block;
+}
+ul.year-ranges li span{
+   display: none;
+   font-size: 18px;
+   line-height: 24px;
+   position: absolute;
+   right: -52px;
+   top: -12px;
+   transition: .3s;
+    font-weight: bold;
+    color: #3D3D41;
+}
+ul.year-ranges li:hover,
+ul.year-ranges li.active{
+    width: 55px;
+}
+ul.year-ranges li:hover span,
+ul.year-ranges li.active span{
+    display: block; 
+}
+ul.year-ranges li:first-child span,
+ul.year-ranges li:last-child span {
+    display: block;
+    top: -13px;
+    right: -59px;
+    font-weight: bold;
+    color: #787878;
+}
+

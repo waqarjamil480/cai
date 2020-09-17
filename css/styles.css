@@ -252,6 +252,11 @@ total 1647
 .dashboard .form-sec .types a img {
     margin-right: 12px;
 }
+.dashboard .form-sec .types a img.first{  
+    margin-left: -8px;
+    opacity: 0.9;
+    max-width: 32px;
+}
 .dashboard .form-sec .types a.active,
 .dashboard .form-sec .types a:hover,
 .dashboard .form-sec .types a:focus,

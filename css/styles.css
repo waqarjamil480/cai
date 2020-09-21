@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url(../fonts/fonts.min.css);
 @import url(bootstrap.min.css);
+@import url(boxicons.min.css);
 @import url(animate.min.css);
+@import url(aos.css);
 
 * {
     margin: 0;
@@ -22,13 +24,11 @@ img {
 *:hover {
     outline: none;
 }
-
 .all-colors {
     color: #31333B;
     color: #11C856;
 
 }
-
 html,
 body {
     height: 100%;
@@ -620,5 +620,283 @@ ul.year-ranges li:last-child span {
     position: relative;
     margin-top: 7px;
 }
-
 /*range wrap*/
+/*web landing page*/
+body.web a{
+    color: #69ABE4;
+}
+body.web a:hover,
+body.web a:hover:focus,
+body.web a:focus{
+    text-decoration: none;
+    color: #69e2e4 !important;
+}
+
+body.web {
+    background-color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+}
+.web .main {
+    padding: 0px 12px;
+}
+.banner-main .top {
+    padding: 22px 32px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+.banner-main .sec-u {
+    margin-bottom: 24px;
+}
+.banner-main .sec-u a {
+    display: inline-block;
+}
+.banner-main .rt {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    float: right;
+    color: #103959;
+    margin-top: 10px;
+}
+.banner-main .msg {
+    background-color: #F8F1D0;
+    padding: 12px 2px;
+    border-radius: 4px;
+}
+.banner-main .msg p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #565656;
+    margin-bottom: 0px;
+}
+.banner-main .msg p a {
+    margin-left: 7px;
+    color: #69ABE4;
+}
+.banner {
+    text-align: center;
+    background-color: #FAFAFA;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+}
+.banner .title {
+    font-weight: bold;
+    font-size: 76px;
+    line-height: 92px;
+    color: #26262B;
+}
+.banner p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #757575;
+    padding-top: 5px;
+}
+.banner .banner-nav>li>a {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #69ABE4;
+    display: block;
+    padding: 0px 26px;
+    position: relative;
+    margin-right: 4px;
+}
+.banner .banner-nav>li>a:before{
+    position: absolute;
+    right: -4px;
+    bottom: -1px;
+    font-family: 'boxicons'!important;
+    content: "\ea1d";
+}
+
+.banner ul.banner-nav>li {
+    display: inline-block;
+    list-style: none;
+}
+
+.banner .banner-nav {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+/*-map-area*/
+.map-area-sc {
+    background-color: #FAFAFA;
+    padding-top: 67px;
+    margin-bottom: 12px;
+}
+.map-area-sc .cus-row {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    display: table;
+    width: 100%;
+}
+.map-area-sc .cus-row .cus-col {
+    display: table-cell;
+    vertical-align: top;
+}
+.map-area-sc .cus-row .left {
+    width: 56.33%;
+}
+.map-area-sc .cus-row .right {
+    width: 43.67%;
+    text-align: right;
+    padding-top: 16px;
+}
+.map-area-sc .cus-row .cus-col .title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    color: #26262B;
+    margin-bottom: 14px;
+}
+.map-area-sc .cus-row .cus-col .para{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #565656;
+    margin-bottom: 30px;
+}
+.map-area-sc .cus-row .cus-col .top-img {
+    margin-bottom: 8px;
+}
+.map-area-sc .cus-row .cus-col ul {
+    padding-left: 0px;
+    width: 100%;
+    clear: both;
+    float: left;
+}
+.map-area-sc .cus-row .cus-col ul li {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #565656;
+    display: block;
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-left: 54px;
+    padding-right: 5px;
+    margin-bottom: 25px;
+}
+.map-area-sc .cus-row .cus-col ul li img {
+    position: absolute;
+    left: 0px;
+    top: 8px;
+}
+.map-area-sc .cus-row .cus-col .link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: middle;
+    display: block;
+    margin-top: 38px;
+    clear: both;
+}
+.map-area-sc .cus-row .cus-col .link  i {
+    vertical-align: middle;
+}
+/*.bottom-2-col*/
+.bottom-2-col .cus-col {
+    width: 50%;
+    float: left;
+}
+.bottom-2-col  .inner{
+    background-color: #FAFAFA;
+    min-height: 580px;
+}
+.bottom-2-col .left-col {
+    padding-right: 6px;
+}
+
+.bottom-2-col .right-col {
+    padding-left: 6px;
+}
+.bottom-2-col .left-col .inner{
+    background-image: url(../images/web/solar-plat-sec.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+.bottom-2-col .right-col .inner{
+    background-image: url(../images/web/partnership.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.bottom-2-col .content {
+    max-width: 468px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    padding-top: 73px;
+}
+.bottom-2-col .content  .main-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #565656;
+}
+
+.bottom-2-col .content  .lg-title {
+    font-size: 36px;
+    line-height: 48px;
+    color: #26262B;
+    margin-bottom: 19px;
+}
+.bottom-2-col .content a.link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.bottom-2-col .content  .main-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #565656;
+}
+
+.bottom-2-col .right-col .content  .lg-title,
+.bottom-2-col .right-col .content  .main-title{
+    color: #fff;
+}
+/*footer*/
+.footer{
+    display: table;
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    color: #646464;
+    padding-top: 24px;
+    padding-bottom: 5px;
+}
+.footer .cus-col{
+    display: table-cell;  
+}
+.footer .left{
+    width: 38.85%;  
+    text-align: center;
+}
+.footer .right{
+   width: 61.42%;
+}
+body.web .footer a{
+    color: #646464;
+}
+.footer p img{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+/*
+38.85 
+61.42
+
+*/
+/*web landing page*/

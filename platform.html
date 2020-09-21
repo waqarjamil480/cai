@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+    <!-- no seo/indexing -- if needed so un comment
+ 		<meta name="description" content="details about the compnay" />
+		<meta name="keywords" content="admin dashboard" />
+		<meta name="author" content="Seedcode">
+		<meta name="robots" content="index, follow">
+		<meta name="revisit-after" content="1 day">
+		-->
+    <!-------------------------------------------------------------------FAVICON LINK-------------------------------------------------------------------------->
+    <link rel="shortcut icon" href="images/dasboard/favicon.jpg" type="image/x-icon" />
+    <link rel="icon" href="images/dasboard/favicon.jpg" type="image/x-icon" />
+    <!--------------------------------------------------------------------------TITLE--------------------------------------------------------------------------->
+    <title>Title Goes Here</title>
+    <!--------------------------------------------------------------------------External Styles------------------------------------------------------------------>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+			<script src="js/respond.min.js"></script>
+	<![endif]-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rwd.css">
+</head>
+
+<body>
+    <!----------------------------------------------------------------------------LEFT-NAVBAR------------------------------------------------------------------------->
+
+    <main class="dashboard">
+        <div class="left-nav cus-col">
+            <div class="inner">
+                <a href="#" class="logo" title="CAI"><img src="images/dasboard/logo.svg" alt="CAI"></a>
+                <span class="bar"></span>
+                <ul class="left-menu-bar">
+                    <li><a href="" title="crop" class="active"><img src="images/dasboard/crop.svg" alt="crop">CROP</a></li>
+                    <li><a href="" title="fire" class="disable"><img src="images/dasboard/fire.svg" alt="FIRE">FIRE</a></li>
+                    <li><a href="" title="flood" class="flood disable"><img src="images/dasboard/flood.svg" alt="FIRE">FLOOD</a></li>
+                </ul>
+
+                <div class="bottom-menu">
+                    <a href="#" class="dots zoom-in" title="test">test<img src="images/dasboard/dots.svg" alt="dots"> </a>
+                    <a href="#" class="help zoom-in" title="help">help<img src="images/dasboard/help.svg" title="help"></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="form-sec cus-col">
+            <div class="inner">
+                <h1 class="title">Crop Analytics</h1>
+                <span class="bar"></span>
+                <form>
+                    <div class="year">
+                        <label>YEAR</label>
+                        <div class="slide-range-pr">
+                            <span class="first">2010</span>
+                            <span class="last">2030</span>
+                            <div class="range-wrap rot90">
+                                <div class="range-value" id="rangeV"></div>
+                                <input id="range" type="range" min="2010" max="2030" step="1">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label>precipitation</label>
+                    <div class="cus-btn-group">
+                        <span class="btn grey active"><img src="images/dasboard/up.svg" alt="up">High</span>
+                        <span class="btn grey"><img class="norm" src="images/dasboard/down.svg" alt="down"><img class="hover" src="images/dasboard/down-wh.svg" alt="down">Low</span>
+                    </div>
+                    <div class="types">
+                        <label>CROP SELECTION</label>
+                        <a href="#" class="active"><img class="first" src="images/dasboard/field-corn-2.svg" alt="corn">Corn</a>
+                        <a href="#" class="disable"><img src="images/dasboard/field-rice.svg" alt="Rice">Rice <span>SOON</span></a>
+                        <a href="#" class="disable"><img src="images/dasboard/field-soybean.svg" alt="Soybean">Soybean <span>SOON</span></a>
+                    </div>
+                    <div class="bottom author-sec">
+                        <label>LEAD DATA SCIENTIST</label>
+                        <a href="#">Radheem Bin Razi</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="map-sec cus-col">
+            <div class="inner">
+                <!--map -->
+            </div>
+        </div>
+    </main>
+
+    <section class="mobile-ui-error">
+        <div class="content">
+            <a href="#" class="logo" title="CAI"><img src="images/dasboard/logo.svg" alt="CAI"></a>
+            <h1>Please Visit this Site On Desktop Screen</h1>
+        </div>
+    </section>
+    <script>
+        const
+            range = document.getElementById('range'),
+            rangeV = document.getElementById('rangeV'),
+            setValue = () => {
+                const
+                    newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
+                    newPosition = 10 - (newValue * 0.1);
+                rangeV.innerHTML = `<span>${range.value}</span>`;
+                rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+            };
+        document.addEventListener("DOMContentLoaded", setValue);
+        range.addEventListener('input', setValue);
+    </script>
+    <!--------------------------------------------------------------------SCRIPTS-------------------------------------------------------------------------------->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/custom.js"></script>
+</body>
+
+</html>

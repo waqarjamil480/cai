@@ -37,12 +37,18 @@
     <main class="dashboard">
         <div class="left-nav cus-col">
             <div class="inner">
-                <a href="#" class="logo" title="CAI"><img src="images/dasboard/logo.svg" alt="CAI"></a>
+                <a href="index.html" class="logo" title="CAI"><img src="images/dasboard/logo.svg" alt="CAI"></a>
                 <span class="bar"></span>
                 <ul class="left-menu-bar">
-                    <li><a href="" title="crop" class="active"><img src="images/dasboard/crop.svg" alt="crop">CROP</a></li>
-                    <li><a href="" title="fire" class="disable"><img src="images/dasboard/fire.svg" alt="FIRE">FIRE</a></li>
-                    <li><a href="" title="flood" class="flood disable"><img src="images/dasboard/flood.svg" alt="FIRE">FLOOD</a></li>
+                    <li>
+                        <a href="" title="crop" class="active"><img src="images/dasboard/crop.svg" alt="crop">CROP</a>
+                    </li>
+                    <li>
+                        <a href="" title="fire" class="disable"><img src="images/dasboard/fire.svg" alt="FIRE">FIRE</a>
+                    </li>
+                    <li>
+                        <a href="" title="flood" class="flood disable"><img src="images/dasboard/flood.svg" alt="FIRE">FLOOD</a>
+                    </li>
                 </ul>
 
                 <div class="bottom-menu">
@@ -93,7 +99,7 @@
                     </div>
                     <label>precipitation</label>
                     <div class="cus-btn-group">
-                        <span class="btn grey active"><img src="images/dasboard/up.svg" alt="up">High</span>
+                        <span class="btn grey active"><img class="norm" src="images/dasboard/up-gr.svg" alt="up"><img class="hover" src="images/dasboard/up.svg" alt="up">High</span>
                         <span class="btn grey"><img class="norm" src="images/dasboard/down.svg" alt="down"><img class="hover" src="images/dasboard/down-wh.svg" alt="down">Low</span>
                     </div>
                     <div class="types">
@@ -119,12 +125,13 @@
     <section class="mobile-ui-error">
         <div class="content">
             <a href="#" class="logo" title="CAI"><img src="images/dasboard/logo.svg" alt="CAI"></a>
-            <h1>Please Visit this Site On Desktop Screen</h1>
+            <h1>Visit Site On Desktop Screen</h1>
         </div>
     </section>
     <script>
         const
             range = document.getElementById('range'),
+            valrange = document.getElementById('range'),
             rangeV = document.getElementById('rangeV'),
             setValue = () => {
                 const
